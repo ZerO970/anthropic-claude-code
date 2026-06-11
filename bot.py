@@ -1,7 +1,9 @@
+import asyncio
 import json
 import logging
 import os
 from telegram import Update, ReplyKeyboardMarkup, ReplyKeyboardRemove
+from telegram.error import NetworkError, TimedOut
 from telegram.ext import (
     Application, CommandHandler, MessageHandler,
     ConversationHandler, ContextTypes, filters
@@ -10,6 +12,16 @@ from db import init_db, upsert_candidate
 from questions import QUESTIONS
 
 logging.basicConfig(level=logging.INFO)
+
+
+async def safe_reply(message, *args, retries=3, **kwargs):
+    for attempt in range(retries):
+        try:
+            return await message.reply_text(*args, **kwargs)
+        except (NetworkError, TimedOut):
+            if attempt == retries - 1:
+                raise
+            await asyncio.sleep(2 ** attempt)
 
 TOKEN = os.environ.get("BOT_TOKEN", "")
 
@@ -23,7 +35,8 @@ EXPERIENCE_OPTIONS = [
 
 
 async def start(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text(
+    await safe_reply(
+        update.message,
         "Привет! 👋 Я помогу тебе пройти отбор на позицию *бармена в Лондоне*.\n\n"
         "Это займёт около 5 минут: пара вопросов о тебе и небольшой тест.\n\n"
         "Как тебя зовут? (Имя и Фамилия)",
@@ -35,13 +48,14 @@ async def start(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 
 async def get_name(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     ctx.user_data["name"] = update.message.text.strip()
-    await update.message.reply_text("Отлично! Какая у тебя национальность / откуда ты?")
+    await safe_reply(update.message, "Отлично! Какая у тебя национальность / откуда ты?")
     return NATIONALITY
 
 
 async def get_nationality(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     ctx.user_data["nationality"] = update.message.text.strip()
-    await update.message.reply_text(
+    await safe_reply(
+        update.message,
         "Сколько у тебя опыта работы за баром?",
         reply_markup=ReplyKeyboardMarkup(EXPERIENCE_OPTIONS, one_time_keyboard=True, resize_keyboard=True)
     )
@@ -53,7 +67,8 @@ async def get_experience(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     ctx.user_data["q_index"] = 0
     ctx.user_data["answers"] = []
 
-    await update.message.reply_text(
+    await safe_reply(
+        update.message,
         f"Супер! Теперь тест — *{len(QUESTIONS)} вопросов* по барной теме.\n"
         "Отвечай просто буквой: *A*, *B*, *C* или *D*.\n\nПоехали! 🍹",
         parse_mode="Markdown",
@@ -67,13 +82,13 @@ async def send_question(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     idx = ctx.user_data["q_index"]
     q = QUESTIONS[idx]
     text = f"*Вопрос {idx + 1}/{len(QUESTIONS)}*\n\n{q['q']}\n\n" + "\n".join(q["opts"])
-    await update.message.reply_text(text, parse_mode="Markdown")
+    await safe_reply(update.message, text, parse_mode="Markdown")
 
 
 async def handle_answer(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     answer = update.message.text.strip().upper()
     if answer not in ("A", "B", "C", "D"):
-        await update.message.reply_text("Пожалуйста, ответь только буквой: A, B, C или D.")
+        await safe_reply(update.message, "Пожалуйста, ответь только буквой: A, B, C или D.")
         return QUIZ
 
     idx = ctx.user_data["q_index"]
@@ -114,7 +129,8 @@ async def finish(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
     )
 
     stars = "⭐" * score + "☆" * (total - score)
-    await update.message.reply_text(
+    await safe_reply(
+        update.message,
         f"✅ Готово, {ud['name']}!\n\n"
         f"Твой результат: *{score}/{total}*\n{stars}\n\n"
         "Мы свяжемся с тобой в ближайшее время. Удачи! 🍀",
@@ -125,7 +141,7 @@ async def finish(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
 
 
 async def cancel(update: Update, ctx: ContextTypes.DEFAULT_TYPE):
-    await update.message.reply_text("Анкета отменена. Напиши /start чтобы начать заново.", reply_markup=ReplyKeyboardRemove())
+    await safe_reply(update.message, "Анкета отменена. Напиши /start чтобы начать заново.", reply_markup=ReplyKeyboardRemove())
     return ConversationHandler.END
 
 
