@@ -3,155 +3,108 @@
 
 ---
 
-## FLOOR 1 — LOUIE
+## GLOBAL OVERVIEW
 
-### OVERVIEW
+| Floor | Bar | ✅ Found (in menu) | ❌ Missing | ⚠️ Not in menu |
+|-------|-----|--------------------|-----------|----------------|
+| First Floor | Louie | 77 | 76 | 13 |
+| Ground Floor | Wani Tzuki | 49 | 104 | 10 |
+| Second Floor | TBC | — | — | — |
 
-| | Items |
-|--|--:|
-| ✅ On shelf — in menu | 77 |
-| ❌ Missing from shelf | 76 |
-| ⚠️ On shelf — NOT in menu | 13 |
-| *(Liqueurs / Aperitifs / Amaro / Beer — checked separately)* | *(25)* |
-
----
-
-## ⚠️ ON SHELF — NOT IN MENU
-*Present on shelf but not in current menu — requires decision (add to menu / remove from bar)*
-
-| # | Item | Category | Note |
-|---|------|----------|------|
-| 1 | Johnnie Walker Black Ruby | World Whisky | |
-| 2 | Veritas | Rum | Possibly = Foursquare Veritas White Rum (already in menu — verify) |
-| 3 | Eminente Grand Reserva | Rum | |
-| 4 | Eminente Ambar | Rum | |
-| 5 | Eminente Reserve | Rum | |
-| 6 | G. Miclo Kirsch | Cognac / Eau-de-vie | |
-| 7 | G. Miclo Poire Williams | Cognac / Eau-de-vie | |
-| 8 | Blanche Armagnac | Armagnac | |
-| 9 | Belvedere Dirty Brew | Vodka | |
-| 10 | Grey Goose La Poire | Vodka | |
-| 11 | Patron El Alto | Tequila | |
-| 12 | Don Julio Rosado | Tequila | |
-| 13 | Lost Explorer | Mezcal | |
-
-> ⚠️ **Additional note:** **Casamigos Reposado** found on shelf — not flagged but also not in menu. Verify.
+*Liqueurs / Aperitifs / Amaro not counted on either floor — check separately*
 
 ---
 
-## ❌ MISSING FROM SHELF
-*In menu, not found on shelf — may need restocking*
+## ⚠️ ON SHELF — NOT IN MENU (BOTH FLOORS)
+*Present on shelf but absent from current menu — action required: add to menu or remove from bar*
 
-### World Whisky (10 missing)
-- Ardbeg Wee Beastie 5yo
-- Clynelish 14yo
-- Dalmore King Alexander
-- Glenfiddich 18yo
-- Glenfiddich Grande Couronne 26yo
-- Johnnie Walker Blue Label
-- Laphroaig Quarter Cask
-- Oban 14yo
-- Talisker 10yo
-- The Taosean Irish Whisky Experience
+| Item | Category | Floor |
+|------|----------|-------|
+| Johnnie Walker Black Ruby | World Whisky | FF |
+| Talisker (unspecified variant) | World Whisky | GF · FF |
+| Veritas | Rum | FF *(verify: may = Foursquare Veritas White Rum in menu)* |
+| Eminente Grand Reserva | Rum | FF |
+| Eminente Ambar | Rum | FF · GF |
+| Eminente Reserve / Reserva | Rum | FF · GF |
+| Kiyomu Rum | Rum | GF |
+| G. Miclo Kirsch | Cognac / Eau-de-vie | FF |
+| G. Miclo Poire Williams | Cognac / Eau-de-vie | FF |
+| Blanche Armagnac | Armagnac | FF |
+| Belvedere Dirty Brew | Vodka | FF |
+| Grey Goose La Poire | Vodka | FF |
+| Nikka Vodka | Vodka | GF |
+| Nikka Gin | Gin | GF |
+| Patron El Alto | Tequila | FF · GF |
+| Don Julio Rosado | Tequila | FF |
+| Casamigos Reposado | Tequila | FF · GF |
+| Lost Explorer Espadin | Mezcal | GF |
+| Lost Explorer Salmiana | Mezcal | GF |
+| Lost Explorer (unspecified) | Mezcal | FF |
 
-> ⚠️ **Note:** "Talisker Scotch Whisky" (unspecified) also noted as missing — only Talisker 10yo is in the menu. Clarify if different variant.
-
-### Rye (7 missing)
-- Hudson Manhattan
-- Jack Daniels Single Barrel Rye
-- Michter's 10yo Rye
-- Thomas H. Handy Sazerac Bott. 2016
-- WhistlePig 12yo
-- WhistlePig Farmstock
-- Woodford Rye
-
-### American Whisky (4 missing)
-- Bernheim
-- Jack Daniel Gentleman Jack
-- Michter's Sour Mash
-- Old Crow
-
-### Bourbon (9 missing)
-- Buffalo Trace
-- Johnny Drum Private Stock
-- Michter's US*1 Small Batch
-- Noah's Mill Bourbon
-- Old Rip Van Winkle 10yo
-- Van Winkle Special Reserve 12yo
-- William Larue Weller 2016
-- Willet's Pot Still Reserve Small Batch
-- Woodford Reserve Distiller's Select
-
-### Rum (11 missing)
-- Bacardi Quatro
-- Bacardi 10yo
-- Barbancourt 3 Stars 1980's
-- Caroni Replica 90 Proof
-- Diplomatico Ambassador
-- El Dorado 21yo
-- Foursquare Veritas White Rum *(see note above)*
-- Ron Santiago de Cuba — 8yo
-- Ron Santiago de Cuba — 11yo
-- Ron Santiago de Cuba — 20yo
-- Zacapa XO
-
-### Cognac (3 missing)
-- Hennessy XO
-- Remy Martin Louis XIII
-- Seven Tails Brandy
-
-### Armagnac (2 missing)
-- Baron De Sigognac VSOP
-- Darroze 12yo
-
-### Calvados (2 missing)
-- Adrien Camut Reserve D'Adrien
-- Dupont 1980
-
-### Brandy (1 missing)
-- Nardini Grappa Bianca
-
-### Vodka (4 missing)
-- Ketel One Citron
-- Konik's Tail
-- Sauvelle
-- Tito's
-
-### Gin (6 missing)
-- Brooklyn
-- Citadelle
-- Citadelle Jardin D'Ete
-- Malfy Pink Grapefruit
-- Plymouth Gin
-- St. George Terroir
-
-### Tequila (9 missing)
-- Altos Anejo
-- Altos Plata
-- Altos Reposado
-- Don Julio 70
-- Jose Cuervo Reserva De La Familia Extra Anejo
-- Maestro Dobel Diamante
-- Mijenta Blanco
-- Patron El Cielo
-- Tapatio Excelencia
-
-### Mezcal (6 missing)
-- Bozal Tobasiche
-- Casamigos Mezcal
-- Del Maguey Chichicapa
-- Del Maguey Vida
-- Derrumbes Michoacan
-- Mahani Joven
-
-### Absinthe (2 missing)
-- Pernod
-- St. George Verte
+> ⚠️ **"Dobel Diamante" (GF, marked !!!!)** — likely the same product as **Maestro Dobel Diamante** in the menu. Verify bottle label before treating as unlisted.
 
 ---
 
-## ✅ ON SHELF — IN MENU
-*Confirmed present*
+## 🍺 BEERS & CIDER — ACTION REQUIRED
+
+| Item | Status | Action |
+|------|--------|--------|
+| NOAM Bavarian Unfiltered Lager | **86 — out of stock** | Restock or remove from menu |
+| Sassy Cider Small Batch | **86 — out of stock** | Restock or remove from menu |
+| Peroni Nastro Azzurro 0% | **Discontinued — not selling** | **Remove from menu** |
+
+---
+---
+
+# FIRST FLOOR — LOUIE
+
+## ❌ MISSING FROM SHELF — FF
+
+### World Whisky (10)
+Ardbeg Wee Beastie 5yo · Clynelish 14yo · Dalmore King Alexander · Glenfiddich 18yo · Glenfiddich Grande Couronne 26yo · Johnnie Walker Blue Label · Laphroaig Quarter Cask · Oban 14yo · Talisker 10yo · The Taosean Irish Whisky Experience
+
+### Rye (7)
+Hudson Manhattan · Jack Daniels Single Barrel Rye · Michter's 10yo Rye · Thomas H. Handy Sazerac Bott. 2016 · WhistlePig 12yo · WhistlePig Farmstock · Woodford Rye
+
+### American Whisky (4)
+Bernheim · Jack Daniel Gentleman Jack · Michter's Sour Mash · Old Crow
+
+### Bourbon (9)
+Buffalo Trace · Johnny Drum Private Stock · Michter's US*1 Small Batch · Noah's Mill Bourbon · Old Rip Van Winkle 10yo · Van Winkle Special Reserve 12yo · William Larue Weller 2016 · Willet's Pot Still Reserve Small Batch · Woodford Reserve Distiller's Select
+
+### Rum (11)
+Bacardi Quatro · Bacardi 10yo · Barbancourt 3 Stars 1980's · Caroni Replica 90 Proof · Diplomatico Ambassador · El Dorado 21yo · Foursquare Veritas White Rum · Ron Santiago de Cuba 8yo · Ron Santiago de Cuba 11yo · Ron Santiago de Cuba 20yo · Zacapa XO
+
+### Cognac (3)
+Hennessy XO · Remy Martin Louis XIII · Seven Tails Brandy
+
+### Armagnac (2)
+Baron De Sigognac VSOP · Darroze 12yo
+
+### Calvados (2)
+Adrien Camut Reserve D'Adrien · Dupont 1980
+
+### Brandy (1)
+Nardini Grappa Bianca
+
+### Vodka (4)
+Ketel One Citron · Konik's Tail · Sauvelle · Tito's
+
+### Gin (6)
+Brooklyn · Citadelle · Citadelle Jardin D'Ete · Malfy Pink Grapefruit · Plymouth Gin · St. George Terroir
+
+### Tequila (9)
+Altos Anejo · Altos Plata · Altos Reposado · Don Julio 70 · Jose Cuervo Reserva De La Familia Extra Anejo · Maestro Dobel Diamante · Mijenta Blanco · Patron El Cielo · Tapatio Excelencia
+
+### Mezcal (6)
+Bozal Tobasiche · Casamigos Mezcal · Del Maguey Chichicapa · Del Maguey Vida · Derrumbes Michoacan · Mahani Joven
+
+### Absinthe (2)
+Pernod · St. George Verte
+
+---
+
+## ✅ ON SHELF — FF (LOUIE)
 
 ### World Whisky (12)
 Ardbeg Uigeadail · Balvenie Port Wood 21yrs · Bowmore 12yo · Glenfiddich 21yo · Glenfiddich Grand Cru 23yo · Highland Park Dark Origins · Jameson Black Barrel · Johnnie Walker Black Label · Lagavulin 16yo · Nikka From The Barrel · Roe & Co · Singleton Dufftown 12yo
@@ -187,5 +140,85 @@ San Cosme
 Jade Nouvelle Orleans Verte
 
 ---
-*Floor 2 — TBC*
-*Floor 3 — TBC*
+---
+
+# GROUND FLOOR — WANI TZUKI
+
+## ❌ MISSING FROM SHELF — GF
+
+### Rye (11)
+Bower Hill Reserve · Hudson Manhattan · Jack Daniels Single Barrel Rye · Jim Beam Rye · Knob Creek Rye · Michter's US*1 Rye · Sazerac · Thomas H. Handy Sazerac Bott. 2016 · WhistlePig 12yo · WhistlePig 15yo · WhistlePig Farmstock
+
+### American Whisky (5)
+Bernheim · Jack Daniel Gentleman Jack · Michter's Sour Mash · Old Crow · Westland Sherry Wood Single Malt
+
+### Bourbon (12)
+Elijah Craig Small Batch · Evan Williams Single Barrel · Knob Creek 9yo · Michter's US*1 Small Batch · Michter's 10yo · Noah's Mill Bourbon · Old Rip Van Winkle 10yo · Van Winkle Special Reserve 12yo · Wathen's Single Barrel · William Larue Weller 2016 · Willet's Pot Still Reserve Small Batch · Woodford Reserve Distiller's Select
+
+### World Whisky (11)
+Ardbeg Wee Beastie 5yo · Bowmore 12yo · Dalmore King Alexander · Glenfiddich 21yo · Highland Park Dark Origins · Johnnie Walker Blue Label · Lagavulin 16yo · Laphroaig Quarter Cask · Roe & Co · Singleton Dufftown 12yo · The Taosean Irish Whisky Experience
+
+### Rum (18)
+Bacardi Carta Blanca · Bacardi Quatro · Bacardi 8yo · Barbancourt 3 Stars 1980's · Caroni Replica 90 Proof · Diplomatico Ambassador · El Dorado 21yo · Foursquare Veritas White Rum · La Hechicera · Plantation White 3 Stars · Plantation Original Dark · Plantation XO · Ron Santiago de Cuba — Carta Blanca · Ron Santiago de Cuba 8yo · Ron Santiago de Cuba 11yo · Ron Santiago de Cuba 20yo · Zacapa 23yo · Zacapa XO
+
+### Cognac (7)
+Hennessy VSOP · Hennessy XO · Martell Cordon Bleu · Martell XO · Ragnaud Sabourin 25 XO · Remy Martin Louis XIII · Seven Tails Brandy
+
+### Armagnac (2)
+Baron De Sigognac VSOP · Darroze 12yo
+
+### Calvados (2)
+Adrien Camut Reserve D'Adrien · Dupont 1980
+
+### Brandy (1)
+Nardini Grappa Bianca
+
+### Vodka (5)
+Absolut Elyx · Ciroc · Ketel One Citron · Konik's Tail · Sauvelle
+
+### Gin (12)
+Aviation · Brooklyn · Citadelle · Citadelle Jardin D'Ete · Few American Gin · Hendrick's · Malfy Pink Grapefruit · Malfy Blood Orange · Monkey 47 · No. 209 · Plymouth Gin · St. George Terroir
+
+### Tequila (10)
+Altos Plata · Altos Reposado · Altos Anejo · Casamigos Anejo · Don Julio 70 · Jose Cuervo Reserva De La Familia Extra Anejo · Maestro Dobel Diamante · Mijenta Blanco · Patron Anejo · Tapatio Excelencia
+
+### Mezcal (6)
+Bozal Tobasiche · Del Maguey Vida · Del Maguey Chichicapa · Derrumbes Michoacan · Mahani Joven · San Cosme
+
+### Absinthe (2)
+Pernod · St. George Verte
+
+---
+
+## ✅ ON SHELF — GF (WANI TZUKI)
+
+### World Whisky (11 in menu + 1 unspecified)
+Ardbeg Uigeadail · Balvenie Port Wood 21yrs · Clynelish 14yo · Glenfiddich 18yo · Glenfiddich Grand Cru 23yo · Glenfiddich Grande Couronne 26yo · Jameson Black Barrel · Johnnie Walker Black Label · Nikka From The Barrel · Oban 14yo · Talisker 10yo
+*(+ "Talisker Scotch Whisky" — unspecified variant, not in menu)*
+
+### Rye (6)
+Bulleit '95' Rye · Michter's 10yo Rye · Rabbit Hole 'Boxergrail' Kentucky Straight Rye · Rittenhouse 100 Proof · WhistlePig 10yo · Woodford Rye
+
+### Bourbon (7)
+Blanton's Gold · Bulleit · Bulleit 10yo · Buffalo Trace · Johnny Drum Private Stock · Rabbit Hole Heigold Straight Bourbon · Rowan's Creek
+
+### Rum (8 in menu)
+Bacardi 10yo · Bacardi Spiced · Clairin Sajous 2016 · Diplomatico Reserva Exclusiva · El Dorado 15yo · Gosling's Black Seal · Santa Teresa 1796 · Trois Rivières
+
+### Vodka (4)
+Belvedere 10 · Grey Goose · Ketel One · Tito's
+
+### Gin (3)
+Palmarae Golden Gin Premier Crù · Tanqueray London Dry · Tanqueray Ten
+
+### Tequila (8 in menu)
+Blanton's Gold · Casamigos Blanco · Clase Azul Reposado · Don Julio 1942 · Don Julio Anejo · Don Julio Reposado · Patron El Cielo · Patron Reposado · Patron Silver
+
+### Mezcal (1)
+Casamigos Mezcal
+
+### Absinthe (1)
+Jade Nouvelle Orleans Verte
+
+---
+*Second Floor — TBC*
